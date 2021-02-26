@@ -56,7 +56,11 @@ const HeroContainer = styled.div`
   grid-template-columns: auto 1fr 1fr 1fr 0.5fr;
   grid-template-rows: auto 1fr 1fr auto auto;
   gap: 1rem;
-  font-family: sans-serif;
+  font-family: acumin-pro-extra-condensed, sans-serif;
+
+  font-weight: 500;
+
+  font-style: normal;
 
   @media (min-width: 850px) {
     transform: rotate(-45deg);
@@ -64,7 +68,7 @@ const HeroContainer = styled.div`
   .chat {
     color: #f9423a;
     font-weight: 800px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     grid-row: 5;
     grid-column: 1;
   }
@@ -78,12 +82,6 @@ const HeroContainer = styled.div`
     text-transform: uppercase;
     position: relative;
     bottom: -25px;
-
-    font-family: acumin-pro-extra-condensed, sans-serif;
-
-    font-weight: 500;
-
-    font-style: normal;
   }
 
   .name {
@@ -118,6 +116,7 @@ const HeroContainer = styled.div`
     grid-row: 3 /4;
     font-weight: 700;
     line-height: 1.2;
+    font-size: 1.2rem;
   }
 
   div ul {
@@ -134,7 +133,7 @@ const HeroContainer = styled.div`
   p {
     grid-column: 3 / 6;
     grid-row: 5;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     border-bottom: 20px solid #3b42ff;
     align-self: start;
     justify-content: end;
