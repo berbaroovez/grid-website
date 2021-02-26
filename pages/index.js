@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <HeroContainer>
         <h1 className="title">Grid Based Layout-"Test"</h1>
-        <h1 className="name">by Carter Olson</h1>
+        <h1 className="name">Explore My Work</h1>
         <h1 className="name">by Carter Olson</h1>
         <LogoFlexBox>
           <a href="https://www.linkedin.com/in/carterdolson/">
@@ -57,7 +57,6 @@ const HeroContainer = styled.div`
   grid-template-rows: auto 1fr 1fr auto auto;
   gap: 1rem;
   font-family: sans-serif;
-  /* transform: skewx(-45deg); */
 
   @media (min-width: 850px) {
     transform: rotate(-45deg);
@@ -70,7 +69,7 @@ const HeroContainer = styled.div`
     grid-column: 1;
   }
   .title {
-    font-size: calc(1.3rem + 1.8vw);
+    font-size: calc(1.8rem + 1.8vw);
     margin: 0;
     line-height: 1.2em;
     grid-column: 1 / 4;
@@ -79,18 +78,25 @@ const HeroContainer = styled.div`
     text-transform: uppercase;
     position: relative;
     bottom: -25px;
+
+    font-family: acumin-pro-extra-condensed, sans-serif;
+
+    font-weight: 500;
+
+    font-style: normal;
   }
 
   .name {
     color: #3b42ff;
     writing-mode: vertical-lr;
+    transform: rotate(180deg);
     grid-column: 3 / 4;
     grid-row: 2 / 5;
     justify-self: end;
     padding-top: 10px;
     margin-top: -10px;
     margin-right: -10px;
-    font-size: calc(1.3rem + 1.8vw);
+    font-size: calc(0.9rem + 1.8vw);
     margin: 0;
     line-height: 1.2em;
 
@@ -101,6 +107,8 @@ const HeroContainer = styled.div`
     font-style: normal;
 
     :last-of-type {
+      transform: unset;
+      font-size: calc(1.1rem + 1.8vw);
       grid-column: 2/3;
     }
   }
@@ -160,5 +168,9 @@ const LogoFlexBox = styled.section`
 
   @media (min-width: 850px) {
     grid-column: 1;
+
+    a img {
+      width: 50px;
+    }
   }
 `;
