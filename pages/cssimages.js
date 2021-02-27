@@ -25,6 +25,15 @@ export default function Home() {
             </Chassis>
           </Laptop>
         </LaptopContainer>
+        <MonitorContainer>
+          <Monitor>
+            <span className="shadow"></span>
+            <span className="frame"></span>
+            <span className="screen"></span>
+            <span className="base"></span>
+            <span className="stand"></span>
+          </Monitor>
+        </MonitorContainer>
       </HeroContainer>
     </>
   );
@@ -38,6 +47,74 @@ const HeroContainer = styled.div`
 
 const LaptopContainer = styled.div`
   margin-top: 200px;
+`;
+
+const MonitorContainer = styled.div`
+  margin-top: 200px;
+  margin-bottom: 200px;
+`;
+
+const Monitor = styled.div`
+  position: relative;
+  width: 600px;
+  height: 320px;
+  left: 50%;
+  margin-left: -300px;
+
+  @media (max-width: 600px) {
+    transform: scale(0.5);
+  }
+  .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: #e9fcff;
+    opacity: 0.9;
+
+    filter: blur(60px);
+  }
+  .frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(107.56deg, #191515 0%, #494848 98.05%);
+    border-radius: 5px;
+  }
+
+  .screen {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    height: 300px;
+    background: url("https://media1.tenor.com/images/5c7654a69e7ed9ecae1c7a7b177d6056/tenor.gif?itemid=16851585");
+    background-size: cover;
+    border-radius: 3px;
+  }
+
+  .stand {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    top: 100%;
+    background: linear-gradient(175.85deg, #262121 3.38%, #3e3c3c 71.95%);
+    left: 50%;
+    margin-left: -10px;
+  }
+
+  .base {
+    transform: perspective(880px) rotateX(40deg);
+    position: absolute;
+    left: 220px;
+    right: 220px;
+    top: 120%;
+    height: 80px;
+    background: linear-gradient(148.63deg, #040404 18.94%, #4d4c4c 51.43%);
+    border-radius: 8px 14px;
+    box-shadow: inset 0 -2px 3px rgba(145, 161, 181, 0.5),
+      inset 1px 6px 4px rgba(253, 255, 255, 0.3);
+  }
 `;
 
 const Laptop = styled.div`
