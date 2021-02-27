@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Carter | Streamer</title>
+        <title>Carter | CSS Art</title>
         <link rel="stylesheet" href="https://use.typekit.net/jmh1tjx.css" />
       </Head>
       <HeroContainer>
